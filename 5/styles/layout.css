@@ -1,0 +1,90 @@
+.d-grid {
+    display: grid;
+}
+
+.align-self-item {
+    grid-template:  repeat(3, 100px) / 1fr 1fr;
+    align-items: start;
+    justify-items: center;
+}
+
+.align-self-item div:nth-child(even) {
+    align-self: stretch;
+    justify-self: stretch;
+} 
+
+.align-self-item div:nth-child(1) {
+    align-self: center;
+    justify-self: start;
+} 
+
+.align-self-item div:nth-child(3) {
+    align-self: center;
+    justify-self: end;
+} 
+
+.align-self-item div:nth-child(5) {
+    align-self: center;
+    justify-self: start;
+} 
+
+.place-item-grid {
+    grid-template: 150px 150px 150px / 1fr 1fr;
+    /* align-items: center;
+    justify-items: start; */
+    place-items: center start;
+}
+
+.place-content-grid {
+    height: 400px;
+    grid-template: 100px 100px 100px / 100px 100px;
+    /* align-content: space-between;
+    justify-content: space-between; */
+    place-content: space-between;
+    /* align-items: center;
+    justify-items: center; */
+    place-items: center;
+}
+
+.place-self {
+    grid-template: 100px 100px / 150px 150px;
+    place-items: center stretch;
+    place-content: space-between;
+}
+
+.place-self div:nth-child(even) {
+    place-self: stretch center;
+}
+
+.min-max-content-grid {
+    grid-template-columns: 1fr max-content 1fr;
+}
+
+.hw {
+    grid-template: 200px / 1fr min-content 1fr;
+}
+
+.task-1 {
+    grid-template: 100px 100px / repeat(3, 1fr);
+}
+
+.task-1 div:nth-child(even) {
+    align-self: center;
+}
+
+.task-2 {
+    justify-content: center;
+}
+
+.task-3 div {
+    place-self: start;
+}
+
+.task-4 {
+    grid-template: 150px / repeat(5, 1fr);
+}
+
+.task-4 div:nth-child(1),
+.task-4 div:nth-child(5) {
+    align-self: center;
+}
